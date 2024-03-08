@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon",
-    "build:ui": "rm -rf dist && cd client && npm run build && mv dist ..",
+    "build:ui": "rm -rf dist && cd client && npm install && npm run build && mv dist ..",
     "deploy:full": "git add client && git commit -m uibuild && git push"
   },
   "keywords": [],
