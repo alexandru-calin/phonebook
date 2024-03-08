@@ -70,7 +70,7 @@ app.post("/api/persons", (req, res) => {
   });
 
   person.save().then(returnedPerson => {
-    res.json(person);
+    res.json(returnedPerson);
   });
 });
 
