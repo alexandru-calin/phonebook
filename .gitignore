@@ -3,3 +3,8 @@ node_modules/
 
 # Environment variables
 .env
+
+# REST client requests
+requests/
+
+dist/
