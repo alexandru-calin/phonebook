@@ -25,10 +25,10 @@ app.use(express.json());
 morgan.token("body", (req, res) => JSON.stringify(req.body));
 
 app.get("/info", (req, res) => {
-  res.send(`
-    <p>Phonebook has info for ${persons.length} people</p>
-    <p>${new Date()}</p>
-  `);
+  Person.countDocuments().then(numberOfPersons => {
+    const info = `<p>Phonebook has info for ${numberOfPersons} people</p><p>${new Date()}</p>`;
+    res.send(info);
+  });
 });
 
 app.get("/api/persons", (req, res) => {
