@@ -1,13 +1,13 @@
 {
-  "name": "phonebook-backend",
+  "name": "phonebook",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon",
-    "build:ui": "rm -rf dist && cd ../full-stack-open-exercises/part2/phonebook && npm run build && cp -r dist ~/projects/phonebook-backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "build:ui": "rm -rf dist && cd client && npm run build && mv dist ..",
+    "deploy:full": "git add client && git commit -m uibuild && git push"
   },
   "keywords": [],
   "author": "alexandru calin",
